@@ -13,6 +13,7 @@
     "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs",
     "cover": "nyc mocha",
     "ci": "npm run lint && npm run build && npm run cover",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "postversion": "git push && git push --tags",
     "prepublishOnly": "npm run ci",
     "preversion": "npm run ci",
