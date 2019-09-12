@@ -9,9 +9,6 @@ export class CookieExtractor {
                     .split(';')
                     .forEach((cook) => {
                         const parts = cook.split('=');
-                        if (parts.length <= 0) {
-                            return;
-                        }
                         const name = parts.shift()!.trim();
                         const value = decodeURI(parts.join('='));
                         if (
